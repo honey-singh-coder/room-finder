@@ -1,0 +1,79 @@
+/* Default Light Mode */
+.light-mode {
+    background-color: #ffffff;
+    color: black;
+}
+
+/* Updated Dark Mode with Dark Blue Background */
+.dark-mode {
+    background-color: #0a192f; /* Dark Blue */
+    color: white;
+}
+
+/* Glitter Effect Border */
+@keyframes glitter {
+    0% { box-shadow: 0 0 5px rgba(173, 216, 230, 0.5); }  /* Light Blue Glow */
+    50% { box-shadow: 0 0 15px rgba(30, 144, 255, 0.9); } /* Deep Blue Glow */
+    100% { box-shadow: 0 0 5px rgba(173, 216, 230, 0.5); }
+}
+
+/* Container with Glitter Effect */
+.container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    animation: glitter 2s infinite alternate; /* Glitter Animation */
+}
+
+/* Light Mode Container */
+.light-mode .container {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: black;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+/* Dark Mode Container (Updated to Dark Blue) */
+.dark-mode .container {
+    background-color: rgba(10, 25, 47, 0.9); /* Deep Dark Blue */
+    color: white;
+    border: 2px solid rgba(30, 144, 255, 0.8); /* Bright Blue Glow */
+    animation: glitter 2s infinite alternate; /* Blue Glitter Animation */
+}
+
+/* Inputs, Buttons */
+input, button {
+    margin: 10px;
+    padding: 10px;
+    width: 90%;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Button with Blue Glitter Effect */
+button {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    animation: glitter 1.5s infinite alternate;
+}
+
+button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.7);
+}
+
+/* Theme Switcher (Top Right) */
+.theme-switcher {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
